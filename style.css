@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+body{
+    background-color: rgb(253, 250, 231);
+    font-family: 'Outfit', sans-serif;
+    font-size: 20px;
+}
+.accordion-header{
+    margin-top: 20px;
+}
+
+.accordion-item {
+    position: relative;
+    margin-bottom: 20px;
+    
+}
+.accordion-item__open {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 1px solid black;
+    color:black;
+    cursor: pointer;
+
+    
+   
+    
+}
+
+.accordion-item__content {
+    padding-left: 30px;
+    border-top: none;
+    display: none;
+    margin-right: 0;
+    
+   
+    
+}
+
+.accordion-item__input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    
+
+}
+
+.wrapper{
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.accordion-item__input:checked ~.accordion-item__open>.icons{
+      
+     
+    transform: rotate(90deg);
+    
+        
+}
+.accordion-item__input:checked ~.accordion-item__open{
+    color:blue;
+    cursor: pointer;
+    
+ 
+
+
+    
+}
+
+
+.accordion-item__input:checked ~.accordion-item__content{
+    display: block;
+    max-width: 500px;
+    max-height: 500px;
+    padding: 0 auto;
+    
+    
+   
+   
+}
+.accordion-item__input:hover ~.accordion-item__content{
+    display: block;
+    max-height: 500px;
+    
+  
+    
+    
+}
+
+.accordion-item__input:focus ~.accordion-item__content{
+   
+    display: block;
+    
+    
+}
+.accordion-item__input:focus ~.accordion-item__open{
+    
+    cursor: pointer;
+    
+}
+.accordion-item__input:hover ~.accordion-item__open>.icons{
+    color:blue;
+    cursor: pointer;
+    
+    transform: rotate(90deg);
+    
+    
+    
+}
+.accordion-item__input:hover ~.accordion-item__open{
+    color:blue;
+    cursor: pointer;
+    
+   
+    
+    
+    
+}
+
+
+
+
+.memes{
+    
+    max-width: 500px;
+    max-height: 500px;
+    
+    animation-name: Appear;
+    animation-duration: 0.5s;
+    animation-timing-function: cubic-bezier(.1,-.6,.2,0);
+   
+}
+@keyframes Appear {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+.icons{
+    
+    
+    max-width: 20px;
+    
+    transform: rotate(45deg);
+
+}
+.icons:active{
+    max-width: 20px;
+
+    transform: rotate(90deg);
+  
+    
+    
+}
+.icons:hover{
+    max-width: 20px;
+    transform: rotate(90deg);
+    
+   
+    
+}
